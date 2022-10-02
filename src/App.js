@@ -1,13 +1,16 @@
 import React from "react";
 import "./App.css";
-import SearchEngine from "./SearchEngine";
+import Weather from "./Weather";
 
-function App() {
+export default function App() {
   return (
     <div className="App">
-      <SearchEngine defaultCity="Guam" />
+      {/*Bootstrap class styling to achieve card-design UI */}
+      <div className="weather-container">
+        <div className="row p-2 main">
+          <Weather defaultCity="Guam" />
+        </div>
+      </div>
     </div>
   );
 }
-
-export default App;
