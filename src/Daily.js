@@ -1,20 +1,22 @@
 import React, { useState } from "react";
 import "./App.css";
+import feelsLikeIcon from "./images/feelsLikeTemp.png";
+import humidityIcon from "./images/humidity.png";
+import windSpeedIcon from "./images/windSpeed.png";
 
 export default function Daily(props) {
-  let daily = props.data;
   //Updating the object
   let dailyWeather = {
-    city: daily.name,
-    country: daily.sys.country,
-    temperature: daily.main.temp,
-    description: daily.weather[0].description,
-    feelsLike: daily.main.feels_like,
-    humidity: daily.main.humidity,
-    wind: daily.wind.speed,
+    city: props.data.name,
+    country: props.data.sys.country,
+    temperature: props.data.main.temp,
+    description: props.data.weather[0].description,
+    feelsLike: props.data.main.feels_like,
+    humidity: props.data.main.humidity,
+    wind: props.data.wind.speed,
   };
+  console.log(props.data);
 
-  console.log("daily", daily);
   return (
     <div className="Daily">
       {/*Get the current date & time of user's location*/}
@@ -95,7 +97,7 @@ export default function Daily(props) {
       <div className="row p-0 mt-2">
         <div className="col p-0 just-left">
           <img
-            src=""
+            src={feelsLikeIcon}
             className="feelsLikeIcon"
             alt="thermostat"
           />
@@ -107,7 +109,7 @@ export default function Daily(props) {
       <div className="row p-0">
         <div className="col p-0 just-left">
           <img
-            src="/"
+            src={humidityIcon}
             className="humidityIcon"
             alt="humidity icon"
           />
@@ -117,7 +119,7 @@ export default function Daily(props) {
       <div className="row p-0">
         <div className="col p-0 just-left">
           <img
-            src="/"
+            src={windSpeedIcon}
             className="windSpeedIcon"
             alt="wind speed icon"
           />
