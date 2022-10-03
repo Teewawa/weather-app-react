@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "./App.css";
 import Temperature from "./Temperature";
 import feelsLikeIcon from "./images/feelsLikeTemp.png";
@@ -59,7 +59,6 @@ export default function Daily(props) {
       {/*Display the current temperature*/}
       <div className="weatherForecast">
         <Temperature celsius={dailyWeather.temperature} />
-        <br />
 
         {/*Display the current weather condition/status*/}
         <div className="weatherStatus">{dailyWeather.description}</div>
