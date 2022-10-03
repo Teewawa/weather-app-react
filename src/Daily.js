@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./App.css";
+import Temperature from "./Temperature";
 import feelsLikeIcon from "./images/feelsLikeTemp.png";
 import humidityIcon from "./images/humidity.png";
 import windSpeedIcon from "./images/windSpeed.png";
@@ -57,30 +58,7 @@ export default function Daily(props) {
 
       {/*Display the current temperature*/}
       <div className="weatherForecast">
-        <span
-          className="temp"
-          id="temperature"
-        >
-          {Math.round(dailyWeather.temperature)}
-        </span>
-
-        {/*Display the Units: C | F*/}
-        <small className="units">
-          <a
-            href="/"
-            className="active"
-            id="celsius-link"
-          >
-            °C
-          </a>{" "}
-          |
-          <a
-            href="/"
-            id="fahrenheit-link"
-          >
-            °F
-          </a>
-        </small>
+        <Temperature celsius={dailyWeather.temperature} />
         <br />
 
         {/*Display the current weather condition/status*/}
