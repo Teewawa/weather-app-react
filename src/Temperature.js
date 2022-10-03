@@ -29,12 +29,12 @@ export default function Temperature(props) {
         </span>
         {/*Display the Units: C | F*/}
         <small className="units">
-          <p
+          <span
             className="active"
             id="celsius-link"
           >
             °C
-          </p>{" "}
+          </span>{" "}
           |{" "}
           <a
             href="/"
@@ -53,7 +53,7 @@ export default function Temperature(props) {
           className="temp"
           id="temperature"
         >
-          {Math.round(props.celsius)}
+          {Math.round(fahrenheit())}
         </span>
         {/*Display the Units: C | F*/}
         <small className="units">
@@ -65,12 +65,12 @@ export default function Temperature(props) {
             °C
           </a>{" "}
           |{" "}
-          <p
+          <span
             className="active"
             id="fahrenheit-link"
           >
             °F
-          </p>
+          </span>
         </small>
       </div>
     );
