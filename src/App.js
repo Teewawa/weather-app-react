@@ -8,7 +8,7 @@ export default function App() {
       {/*Bootstrap class styling to achieve card-design UI */}
       <div className="weather-container">
         <div className="row p-2 main">
-          <Weather defaultCity="Guam" />
+          <Weather defaultCity="Hagåtña" />
         </div>
       </div>
     </div>
